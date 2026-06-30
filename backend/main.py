@@ -7,8 +7,12 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_methods=["POST"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://vectorshifto.vercel.app",
+        "https://vectorshifto-et2er8zik-bhuvaneshchaudhari00-3494s-projects.vercel.app",
+    ],
+    allow_methods=["POST", "OPTIONS"],
     allow_headers=["Content-Type"],
 )
 
